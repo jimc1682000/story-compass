@@ -34,9 +34,9 @@ def norm(t):
     return re.sub(r"[\s　《》〈〉「」()（）:：·・,，.。!！?？\-—_]", "", unicodedata.normalize("NFKC", t or "")).lower()
 
 def files():
-    # 除了 .git/ 之外不忽略任何目錄；symlink 本身也要列出並拒絕，不能跟到套件外。
+    # 除了 .git（資料夾，或 worktree 裡的 .git 檔）之外不忽略任何目錄；symlink 本身也要列出並拒絕，不能跟到套件外。
     return sorted(p for p in ROOT.rglob("*") if (p.is_file() or p.is_symlink())
-                  and ".git" not in p.relative_to(ROOT).parts[:-1])
+                  and ".git" not in p.relative_to(ROOT).parts)
 
 
 def main():

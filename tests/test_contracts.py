@@ -420,6 +420,14 @@ class PrivacyGate(unittest.TestCase):
         self.assertTrue(report.is_file())
         self.assertEqual(before,{p.relative_to(self.package) for p in self.package.rglob('*') if p.is_file()})
 
+    def test_worktree_git_file_is_skipped(self):
+        git = self.package / '.git'
+        if git.is_dir():
+            shutil.rmtree(git)
+        git.write_text('gitdir: /' + 'Users/someone/src/package/.git/worktrees/wt\n')
+        result = self.run_gate()
+        self.assertEqual(result.returncode,0,result.stdout + result.stderr)
+
     def test_unallowlisted_file_in_cache_directory_is_rejected(self):
         folder = self.package / '__pycache__'
         folder.mkdir()
