@@ -1,0 +1,38 @@
+{
+  "desc": "同版本人工完成不被平台低進度覆蓋；新完成日期另列重讀候選，不改首次完成",
+  "request": "resolve_observations",
+  "field": "progress.state",
+  "scope": {
+    "work_id": "w-lock",
+    "edition_id": "translation-a",
+    "run_id": "initial",
+    "scope": "whole"
+  },
+  "observations": [
+    {
+      "work_id": "w-lock",
+      "edition_id": "translation-a",
+      "run_id": "initial",
+      "scope": "whole",
+      "field": "progress.state",
+      "value": "completed",
+      "source": "manual",
+      "explicit": true,
+      "observed_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "work_id": "w-lock",
+      "edition_id": "translation-a",
+      "run_id": "initial",
+      "scope": "whole",
+      "field": "progress.state",
+      "value": "in_progress",
+      "source": "platform",
+      "observed_at": "2026-02-01T00:00:00Z"
+    }
+  ],
+  "expected": {
+    "final_status": "completed",
+    "needs_confirmation": false
+  }
+}

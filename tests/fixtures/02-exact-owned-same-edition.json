@@ -1,0 +1,146 @@
+{
+  "desc": "同一作品、同一版本已在書庫（ISBN 相同）",
+  "settings": {
+    "budget": {
+      "stance": "unset"
+    }
+  },
+  "coverage": {
+    "library": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    },
+    "wishlist": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    },
+    "watched": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    }
+  },
+  "candidate": {
+    "schema_version": 2,
+    "id": "w-river",
+    "title": "河流的記憶",
+    "creators": [
+      "虛構創作者"
+    ],
+    "media": "book",
+    "adaptation_of": null,
+    "editions": [
+      {
+        "id": "translation-a",
+        "label": "甲譯本",
+        "isbn": [
+          "9780000000002"
+        ],
+        "personal": {
+          "progress": {
+            "state": "unknown",
+            "last_completed": null,
+            "partial": null,
+            "last_viewed_at": null,
+            "completions": [],
+            "revisits": []
+          },
+          "intent": {
+            "purchase": "unknown",
+            "reject_reason": null,
+            "worth_owning": null
+          },
+          "holdings": [],
+          "observations": []
+        }
+      }
+    ]
+  },
+  "request": "evaluate",
+  "expected": {
+    "duplicate": "exact",
+    "action": "先讀書庫",
+    "must_say": "書庫"
+  },
+  "assessment": {
+    "type": "D",
+    "proposed_score": 70,
+    "reviews": [
+      "specialist_review",
+      "reader_3star"
+    ],
+    "price": {
+      "sale": true
+    },
+    "edition_id": "translation-a",
+    "carrier": "ebook",
+    "platform": "manual"
+  },
+  "records": [
+    {
+      "schema_version": 2,
+      "id": "w-river",
+      "title": "《虛構：河流的記憶》",
+      "creators": [
+        "虛構創作者"
+      ],
+      "media": "book",
+      "adaptation_of": null,
+      "editions": [
+        {
+          "id": "translation-a",
+          "label": "甲譯本",
+          "isbn": [
+            "9780000000002"
+          ],
+          "personal": {
+            "progress": {
+              "state": "not_started",
+              "last_completed": null,
+              "partial": null,
+              "last_viewed_at": null,
+              "completions": [],
+              "revisits": []
+            },
+            "intent": {
+              "purchase": "unknown",
+              "reject_reason": null,
+              "worth_owning": null
+            },
+            "holdings": [
+              {
+                "carrier": "ebook",
+                "platform": "manual",
+                "ownership": "owned",
+                "preview": false,
+                "source": "manual",
+                "observed_at": "2026-01-01T00:00:00Z"
+              }
+            ],
+            "observations": []
+          }
+        }
+      ]
+    }
+  ],
+  "seed": {
+    "schema_version": 2,
+    "goals": [
+      {
+        "question": "想理解海洋、歷史與敘事中的新觀點"
+      }
+    ],
+    "known_works": [
+      {
+        "title": "《虛構：潮間帶筆記》",
+        "creators": [
+          "虛構作者"
+        ],
+        "media": "book",
+        "progress": {
+          "state": "completed"
+        },
+        "verdict": "已理解基本分類，希望看新的連結"
+      }
+    ]
+  }
+}

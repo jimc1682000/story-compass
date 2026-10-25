@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -B tests/check_prompt.py
+      - run: python -B tests/run_tests.py
+      - run: python -B -m unittest discover -s tests -p 'test_*.py'
+      - run: python -B tools/privacy_check.py

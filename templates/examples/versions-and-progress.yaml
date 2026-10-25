@@ -1,0 +1,303 @@
+# 全為虛構；資料規範示例，不是平台同步結果。
+{
+  "schema_version": 2,
+  "works": [
+    {
+      "schema_version": 2,
+      "id": "w-tide",
+      "title": "《虛構：潮汐的算術》",
+      "creators": [
+        "虛構創作者"
+      ],
+      "media": "book",
+      "adaptation_of": null,
+      "editions": [
+        {
+          "id": "translation-a",
+          "label": "甲譯本",
+          "isbn": [],
+          "personal": {
+            "progress": {
+              "state": "completed",
+              "last_completed": null,
+              "partial": null,
+              "last_viewed_at": null,
+              "completions": [
+                {
+                  "run_id": "initial",
+                  "scope": "whole",
+                  "event_at": null,
+                  "source": "manual",
+                  "observed_at": "2026-01-01T00:00:00Z"
+                }
+              ],
+              "revisits": [],
+              "seasons": []
+            },
+            "intent": {
+              "purchase": "unknown",
+              "reject_reason": null,
+              "worth_owning": null
+            },
+            "holdings": [],
+            "observations": [
+              {
+                "work_id": "w-tide",
+                "edition_id": "translation-a",
+                "run_id": "initial",
+                "scope": "whole",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "field": "progress.state",
+                "value": "completed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "translation-b",
+          "label": "乙譯本",
+          "isbn": [],
+          "personal": {
+            "progress": {
+              "state": "not_started",
+              "last_completed": null,
+              "partial": null,
+              "last_viewed_at": null,
+              "completions": [],
+              "revisits": [],
+              "seasons": []
+            },
+            "intent": {
+              "purchase": "unknown",
+              "reject_reason": null,
+              "worth_owning": null
+            },
+            "holdings": [
+              {
+                "carrier": "ebook",
+                "platform": "manual",
+                "ownership": "owned",
+                "preview": false,
+                "source": "manual",
+                "observed_at": "2026-01-01T00:00:00Z"
+              }
+            ],
+            "observations": [
+              {
+                "work_id": "w-tide",
+                "edition_id": "translation-b",
+                "run_id": "initial",
+                "scope": "whole",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "field": "progress.state",
+                "value": "not_started"
+              }
+            ]
+          }
+        }
+      ],
+      "summary": {
+        "completed_editions": [
+          "translation-a"
+        ],
+        "unstarted_editions": [
+          "translation-b"
+        ]
+      }
+    },
+    {
+      "schema_version": 2,
+      "id": "w-tide-anime",
+      "title": "《虛構：潮汐的算術》動畫",
+      "creators": [
+        "虛構創作者"
+      ],
+      "media": "anime",
+      "adaptation_of": "w-tide",
+      "editions": [
+        {
+          "id": "broadcast",
+          "label": "動畫 S1",
+          "isbn": [],
+          "personal": {
+            "progress": {
+              "state": "paused",
+              "last_completed": {
+                "season": 2,
+                "episode": 3
+              },
+              "partial": {
+                "season": 2,
+                "episode": 4,
+                "position_seconds": 600
+              },
+              "last_viewed_at": null,
+              "completions": [
+                {
+                  "run_id": "initial",
+                  "scope": "season",
+                  "season": 1,
+                  "event_at": null,
+                  "source": "manual",
+                  "observed_at": "2026-01-01T00:00:00Z"
+                }
+              ],
+              "revisits": [],
+              "seasons": [
+                {
+                  "number": 1,
+                  "state": "completed",
+                  "last_completed_episode": 12,
+                  "partial_episode": null,
+                  "last_viewed_at": null
+                },
+                {
+                  "number": 2,
+                  "state": "paused",
+                  "last_completed_episode": 3,
+                  "partial_episode": {
+                    "episode": 4,
+                    "position_seconds": 600
+                  },
+                  "last_viewed_at": null
+                }
+              ]
+            },
+            "intent": {
+              "purchase": "unknown",
+              "reject_reason": null,
+              "worth_owning": null
+            },
+            "holdings": [],
+            "observations": [
+              {
+                "work_id": "w-tide-anime",
+                "edition_id": "broadcast",
+                "run_id": "initial",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "scope": "whole",
+                "field": "progress.state",
+                "value": "paused"
+              },
+              {
+                "work_id": "w-tide-anime",
+                "edition_id": "broadcast",
+                "run_id": "initial",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "scope": "season",
+                "season": 1,
+                "field": "progress.state",
+                "value": "completed"
+              },
+              {
+                "work_id": "w-tide-anime",
+                "edition_id": "broadcast",
+                "run_id": "initial",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "scope": "season",
+                "season": 1,
+                "field": "progress.last_completed",
+                "value": {
+                  "season": 1,
+                  "episode": 12
+                }
+              },
+              {
+                "work_id": "w-tide-anime",
+                "edition_id": "broadcast",
+                "run_id": "initial",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "scope": "season",
+                "season": 2,
+                "field": "progress.state",
+                "value": "paused"
+              },
+              {
+                "work_id": "w-tide-anime",
+                "edition_id": "broadcast",
+                "run_id": "initial",
+                "source": "manual",
+                "explicit": true,
+                "observed_at": "2026-01-01T00:00:00Z",
+                "scope": "season",
+                "season": 2,
+                "field": "progress.last_completed",
+                "value": {
+                  "season": 2,
+                  "episode": 3
+                }
+              }
+            ]
+          },
+          "episode_catalog": {
+            "verified": true,
+            "source": "manual",
+            "observed_at": "2026-01-01T00:00:00Z",
+            "positions": [
+              {
+                "season": 1,
+                "episode": 1
+              },
+              {
+                "season": 1,
+                "episode": 2
+              },
+              {
+                "season": 1,
+                "episode": 3
+              },
+              {
+                "season": 1,
+                "episode": 4
+              },
+              {
+                "season": 1,
+                "episode": 5
+              },
+              {
+                "season": 1,
+                "episode": 6
+              },
+              {
+                "season": 1,
+                "episode": 7
+              },
+              {
+                "season": 1,
+                "episode": 8
+              },
+              {
+                "season": 1,
+                "episode": 9
+              },
+              {
+                "season": 1,
+                "episode": 10
+              },
+              {
+                "season": 1,
+                "episode": 11
+              },
+              {
+                "season": 1,
+                "episode": 12
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# JSON 相容的 YAML；null 表示未知／未設定。欄位契約見 skill 的 references。
+{
+  "schema_version": 2,
+  "goals": [
+    {
+      "question": null,
+      "why_now": null
+    }
+  ],
+  "known_works": [
+    {
+      "id": null,
+      "title": null,
+      "creators": [],
+      "media": null,
+      "edition_label": null,
+      "progress": {
+        "state": "unknown"
+      },
+      "verdict": null
+    }
+  ]
+}

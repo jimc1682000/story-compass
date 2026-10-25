@@ -1,0 +1,57 @@
+# JSON 相容的 YAML；null 表示未知／未設定。欄位契約見 skill 的 references。
+# notes_url：指向你筆記系統裡對應筆記的 URL 或相對路徑；不要把筆記全文貼進來。
+{
+  "schema_version": 2,
+  "id": "work-id",
+  "title": null,
+  "title_original": null,
+  "creators": [],
+  "media": "book",
+  "adaptation_of": null,
+  "editions": [
+    {
+      "id": "edition-id",
+      "label": null,
+      "translator": null,
+      "publisher": null,
+      "isbn": [],
+      "notes": null,
+      "episode_catalog": {
+        "verified": false,
+        "positions": [],
+        "source": null,
+        "observed_at": null
+      },
+      "personal": {
+        "progress": {
+          "state": "unknown",
+          "last_completed": null,
+          "partial": null,
+          "last_viewed_at": null,
+          "completions": [],
+          "revisits": [],
+          "seasons": []
+        },
+        "intent": {
+          "purchase": "unknown",
+          "reject_reason": null,
+          "worth_owning": null,
+          "worth_rereading": null
+        },
+        "holdings": [],
+        "observations": []
+      }
+    }
+  ],
+  "summary": {},
+  "fields": [],
+  "concepts": [],
+  "nodes": [],
+  "cross_links": [],
+  "substitutes": [],
+  "overlaps": [],
+  "availability_risk": false,
+  "runtime_minutes": null,
+  "added": null,
+  "notes_url": null
+}

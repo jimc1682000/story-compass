@@ -1,0 +1,36 @@
+# JSON 相容的 YAML；null 表示未知／未設定。擁有清單（目錄）的總索引，由你的同步工具或手動維護產生；本套件不附同步程式。
+{
+  "schema_version": 2,
+  "sources": [
+    {
+      "name": "example-ebook-store",
+      "kind": "platform",
+      "method": "只讀清單匯出；不下載內容、不處理 DRM、倉庫內不放憑證",
+      "synced_at": null,
+      "wishlist_synced_at": null,
+      "files": [
+        "catalog/example-ebook-store-01.json"
+      ]
+    },
+    {
+      "name": "print",
+      "kind": "manual",
+      "method": "紙本手動維護；不被任何平台同步覆寫",
+      "synced_at": null,
+      "files": [
+        "catalog/print.json"
+      ]
+    }
+  ],
+  "counts": {
+    "owned_total": 0,
+    "completed": 0,
+    "in_progress": 0,
+    "not_started": 0,
+    "wishlist": 0,
+    "previews_excluded": 0
+  },
+  "exclusions_file": "catalog/excluded-previews.json",
+  "history_dir": "catalog/history/",
+  "note": "counts 只在同步成功後整份改寫；同步失敗保留上一次成功的數字與時間。持有與讀過分開統計，不能用「擁有＝已讀＋未讀＋閱讀中」推算；對不上就停止寫入並回報。"
+}

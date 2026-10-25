@@ -1,0 +1,134 @@
+{
+  "desc": "曾拒絕但出了增訂版（新證據）：重新評估並說明新證據",
+  "settings": {
+    "budget": {
+      "stance": "unset"
+    }
+  },
+  "coverage": {
+    "library": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    },
+    "wishlist": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    },
+    "watched": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    }
+  },
+  "candidate": {
+    "schema_version": 2,
+    "id": "w-tips2",
+    "title": "《虛構：城市的骨架》增訂版",
+    "creators": [
+      "虛構創作者"
+    ],
+    "media": "book",
+    "adaptation_of": null,
+    "editions": [
+      {
+        "id": "revised",
+        "label": "增訂版",
+        "isbn": [],
+        "personal": {
+          "progress": {
+            "state": "unknown",
+            "last_completed": null,
+            "partial": null,
+            "last_viewed_at": null,
+            "completions": [],
+            "revisits": []
+          },
+          "intent": {
+            "purchase": "unknown",
+            "reject_reason": null,
+            "worth_owning": null
+          },
+          "holdings": [],
+          "observations": []
+        }
+      }
+    ]
+  },
+  "request": "evaluate",
+  "expected": {
+    "action": "Buy on Sale",
+    "reuses_reject_reason": false,
+    "mentions_new_evidence": true
+  },
+  "assessment": {
+    "type": "B",
+    "proposed_score": 66,
+    "reviews": [
+      "specialist_review",
+      "reader_3star"
+    ],
+    "price": {
+      "sale": true
+    },
+    "new_evidence": "增訂版新增三章與新資料",
+    "edition_id": "revised",
+    "carrier": "ebook",
+    "platform": "manual"
+  },
+  "records": [
+    {
+      "schema_version": 2,
+      "id": "w-tips2",
+      "title": "《虛構：城市的骨架》",
+      "creators": [
+        "虛構創作者"
+      ],
+      "media": "book",
+      "adaptation_of": null,
+      "editions": [
+        {
+          "id": "first",
+          "label": "初版",
+          "isbn": [],
+          "personal": {
+            "progress": {
+              "state": "unknown",
+              "last_completed": null,
+              "partial": null,
+              "last_viewed_at": null,
+              "completions": [],
+              "revisits": []
+            },
+            "intent": {
+              "purchase": "declined",
+              "reject_reason": "資料過時",
+              "worth_owning": null
+            },
+            "holdings": [],
+            "observations": []
+          }
+        }
+      ]
+    }
+  ],
+  "seed": {
+    "schema_version": 2,
+    "goals": [
+      {
+        "question": "想理解海洋、歷史與敘事中的新觀點"
+      }
+    ],
+    "known_works": [
+      {
+        "title": "《虛構：潮間帶筆記》",
+        "creators": [
+          "虛構作者"
+        ],
+        "media": "book",
+        "progress": {
+          "state": "completed"
+        },
+        "verdict": "已理解基本分類，希望看新的連結"
+      }
+    ]
+  }
+}

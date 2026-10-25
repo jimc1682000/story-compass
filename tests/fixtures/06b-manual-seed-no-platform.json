@@ -1,0 +1,107 @@
+{
+  "desc": "平台全部未接／失敗，但有目標與手動已知作品 seed：可個人評估",
+  "settings": {
+    "budget": {
+      "stance": "unset"
+    }
+  },
+  "coverage": {
+    "library": {
+      "status": "not_connected"
+    },
+    "wishlist": {
+      "status": "not_connected"
+    },
+    "watched": {
+      "status": "failed",
+      "last_sync": "2026-01-01T00:00:00Z"
+    }
+  },
+  "candidate": {
+    "schema_version": 2,
+    "id": "w-new1",
+    "title": "《虛構：島嶼語言史》",
+    "creators": [
+      "虛構創作者"
+    ],
+    "media": "book",
+    "adaptation_of": null,
+    "editions": [
+      {
+        "id": "original",
+        "label": "原版中文",
+        "isbn": [],
+        "personal": {
+          "progress": {
+            "state": "unknown",
+            "last_completed": null,
+            "partial": null,
+            "last_viewed_at": null,
+            "completions": [],
+            "revisits": []
+          },
+          "intent": {
+            "purchase": "unknown",
+            "reject_reason": null,
+            "worth_owning": null
+          },
+          "holdings": [],
+          "observations": []
+        }
+      }
+    ]
+  },
+  "request": "evaluate",
+  "expected": {
+    "gaps": [
+      "library",
+      "wishlist",
+      "watched"
+    ],
+    "phrase_required": "查不到≠沒買／沒看",
+    "phrase_forbidden": [
+      "沒有買",
+      "沒買過",
+      "平台沒有"
+    ],
+    "score": 64,
+    "action": "Borrow",
+    "analysis_mode": "personal"
+  },
+  "assessment": {
+    "type": "A",
+    "proposed_score": 64,
+    "reviews": [
+      "specialist_review",
+      "reader_3star"
+    ],
+    "price": {
+      "sale": false
+    },
+    "edition_id": "original",
+    "carrier": "ebook",
+    "platform": "manual"
+  },
+  "records": [],
+  "seed": {
+    "schema_version": 2,
+    "goals": [
+      {
+        "question": "想理解海洋、歷史與敘事中的新觀點"
+      }
+    ],
+    "known_works": [
+      {
+        "title": "《虛構：潮間帶筆記》",
+        "creators": [
+          "虛構作者"
+        ],
+        "media": "book",
+        "progress": {
+          "state": "completed"
+        },
+        "verdict": "已理解基本分類，希望看新的連結"
+      }
+    ]
+  }
+}

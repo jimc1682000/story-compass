@@ -1,0 +1,92 @@
+{
+  "desc": "全部平台不可用且完全沒有個人依據：不得給個人分數，保留缺口用語",
+  "settings": {
+    "budget": {
+      "stance": "unset"
+    }
+  },
+  "coverage": {
+    "library": {
+      "status": "not_connected"
+    },
+    "wishlist": {
+      "status": "not_connected"
+    },
+    "watched": {
+      "status": "failed",
+      "last_sync": "2026-01-01T00:00:00Z"
+    }
+  },
+  "candidate": {
+    "schema_version": 2,
+    "id": "w-new1",
+    "title": "《虛構：島嶼語言史》",
+    "creators": [
+      "虛構創作者"
+    ],
+    "media": "book",
+    "adaptation_of": null,
+    "editions": [
+      {
+        "id": "original",
+        "label": "原版中文",
+        "isbn": [],
+        "personal": {
+          "progress": {
+            "state": "unknown",
+            "last_completed": null,
+            "partial": null,
+            "last_viewed_at": null,
+            "completions": [],
+            "revisits": []
+          },
+          "intent": {
+            "purchase": "unknown",
+            "reject_reason": null,
+            "worth_owning": null
+          },
+          "holdings": [],
+          "observations": []
+        }
+      }
+    ]
+  },
+  "request": "evaluate",
+  "expected": {
+    "gaps": [
+      "library",
+      "wishlist",
+      "watched"
+    ],
+    "phrase_required": "查不到≠沒買／沒看",
+    "phrase_forbidden": [
+      "沒有買",
+      "沒買過",
+      "平台沒有"
+    ],
+    "score": null,
+    "action": null,
+    "analysis_mode": "general",
+    "label": "證據不足暫不評分"
+  },
+  "assessment": {
+    "type": "A",
+    "proposed_score": 64,
+    "reviews": [
+      "specialist_review",
+      "reader_3star"
+    ],
+    "price": {
+      "sale": false
+    },
+    "edition_id": "original",
+    "carrier": "ebook",
+    "platform": "manual"
+  },
+  "records": [],
+  "seed": {
+    "schema_version": 2,
+    "goals": [],
+    "known_works": []
+  }
+}

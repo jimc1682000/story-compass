@@ -1,0 +1,98 @@
+# JSON 相容的 YAML；null 表示未知／未設定。欄位契約見 skill 的 references。
+{
+  "schema_version": 2,
+  "profile": {
+    "display_name": null,
+    "language": "zh-Hant",
+    "region": null,
+    "timezone": null
+  },
+  "goals": [],
+  "preferences": {
+    "media": [],
+    "avoid_genres": [],
+    "translation_strict": true,
+    "simplified_chinese_ok": null
+  },
+  "budget": {
+    "stance": "unset",
+    "monthly_cap": null,
+    "currency": null
+  },
+  "map": {
+    "max_active_paths_soft": null
+  },
+  "data_sources": {
+    "knowledge_map_repo": null,
+    "catalog_path": null,
+    "work_cards_path": null,
+    "paths_file": null,
+    "library_export": null,
+    "watch_history_export": null,
+    "manual_list": null
+  },
+  "schedule": {
+    "daily_deal": {
+      "enabled": false,
+      "cadence": "daily",
+      "timezone": null,
+      "time": null,
+      "source": null,
+      "output": null,
+      "report_mode": "full_list",
+      "trial_succeeded": false,
+      "user_confirmed": false
+    },
+    "delisting": {
+      "enabled": false,
+      "cadence": "monthly",
+      "timezone": null,
+      "time": null,
+      "source": null,
+      "output": null,
+      "report_mode": "recommendations",
+      "trial_succeeded": false,
+      "user_confirmed": false,
+      "day_of_month": null,
+      "missing_day": "skip"
+    },
+    "weekly_picks": {
+      "enabled": false,
+      "cadence": "weekly",
+      "timezone": null,
+      "time": null,
+      "source": null,
+      "output": null,
+      "report_mode": "full_list",
+      "trial_succeeded": false,
+      "user_confirmed": false,
+      "weekday": null
+    },
+    "library_sync": {
+      "enabled": false,
+      "cadence": "daily",
+      "timezone": null,
+      "time": null,
+      "source": null,
+      "output": null,
+      "report_mode": "sync",
+      "trial_succeeded": false,
+      "user_confirmed": false
+    },
+    "watch_history_sync": {
+      "enabled": false,
+      "cadence": "daily",
+      "timezone": null,
+      "time": null,
+      "source": null,
+      "output": null,
+      "report_mode": "sync",
+      "trial_succeeded": false,
+      "user_confirmed": false
+    }
+  },
+  "output": {
+    "location": null,
+    "quiet_when_nothing": true
+  }
+}

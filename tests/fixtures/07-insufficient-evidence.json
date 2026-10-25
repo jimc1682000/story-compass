@@ -1,0 +1,97 @@
+{
+  "desc": "只有出版社文案：證據不足暫不評分",
+  "settings": {
+    "budget": {
+      "stance": "unset"
+    }
+  },
+  "coverage": {
+    "library": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    },
+    "wishlist": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    },
+    "watched": {
+      "status": "ok",
+      "last_sync": "2026-01-01T00:00:00Z"
+    }
+  },
+  "candidate": {
+    "schema_version": 2,
+    "id": "w-anon",
+    "title": "《虛構：無名之書》",
+    "creators": [
+      "虛構創作者"
+    ],
+    "media": "book",
+    "adaptation_of": null,
+    "editions": [
+      {
+        "id": "original",
+        "label": "原版中文",
+        "isbn": [],
+        "personal": {
+          "progress": {
+            "state": "unknown",
+            "last_completed": null,
+            "partial": null,
+            "last_viewed_at": null,
+            "completions": [],
+            "revisits": []
+          },
+          "intent": {
+            "purchase": "unknown",
+            "reject_reason": null,
+            "worth_owning": null
+          },
+          "holdings": [],
+          "observations": []
+        }
+      }
+    ]
+  },
+  "request": "evaluate",
+  "expected": {
+    "score": null,
+    "label": "證據不足暫不評分",
+    "action": null
+  },
+  "assessment": {
+    "type": "A",
+    "proposed_score": 75,
+    "reviews": [
+      "publisher_copy"
+    ],
+    "price": {
+      "sale": true
+    },
+    "edition_id": "original",
+    "carrier": "ebook",
+    "platform": "manual"
+  },
+  "records": [],
+  "seed": {
+    "schema_version": 2,
+    "goals": [
+      {
+        "question": "想理解海洋、歷史與敘事中的新觀點"
+      }
+    ],
+    "known_works": [
+      {
+        "title": "《虛構：潮間帶筆記》",
+        "creators": [
+          "虛構作者"
+        ],
+        "media": "book",
+        "progress": {
+          "state": "completed"
+        },
+        "verdict": "已理解基本分類，希望看新的連結"
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+# JSON 相容的 YAML；null 表示未知／未設定。閱讀路線檔：路線意圖的真相來源，總覽檔只是它的投影。
+# 路線＝依賴／拓樸（先讀什麼才讀得懂什麼），不是書櫃分類。範例作品全為虛構。
+# timezone：總覽時間戳用的 IANA 時區名，null＝UTC。
+{
+  "schema_version": 2,
+  "updated": null,
+  "timezone": null,
+  "rules": {
+    "max_active_paths_soft": null,
+    "prefer_merge_over_new": true,
+    "diagrams_are_projections": true
+  },
+  "paths": [
+    {
+      "id": "example-foundation",
+      "title": "《虛構：海的邊界》所在的入門線",
+      "layer": "os",
+      "track": "map",
+      "status": "pending",
+      "since": null,
+      "until": null,
+      "parent": null,
+      "merged_into": null,
+      "position": "一句話：這條線現在走到哪",
+      "backbone": [
+        "w-sea-border"
+      ],
+      "reading_order": [
+        "w-sea-border",
+        "w-tide-arithmetic"
+      ],
+      "reading_order_supplement": [],
+      "reading_now": [],
+      "next_owned": [
+        "w-tide-arithmetic"
+      ],
+      "wishlist_later": [],
+      "cross_links": [],
+      "optional_pair": [],
+      "unskippable": [
+        "w-sea-border"
+      ],
+      "surgical_buy": [],
+      "paused_ok": false,
+      "notes": null
+    }
+  ]
+}
