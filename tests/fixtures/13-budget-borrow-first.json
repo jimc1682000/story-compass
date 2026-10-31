@@ -70,7 +70,11 @@
     },
     "edition_id": "original",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "以山脈如何阻隔與連結帝國為主軸，提出一套用地形解釋帝國邊界的框架，案例橫跨三個大陸。",
+      "reader_3star": "框架很有說服力，但案例多半在內陸，和海洋有關的只有一章；讀完會想重看自己對歷史地圖的理解。"
+    }
   },
   "records": [],
   "seed": {

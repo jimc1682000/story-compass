@@ -70,7 +70,11 @@
     },
     "edition_id": "original",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "十個效率技巧各配一則名人故事，觀念多來自既有的時間管理經典，沒有新研究或新資料。",
+      "reader_3star": "好讀，但讀過任何一本時間管理書都會覺得似曾相識。"
+    }
   },
   "records": [
     {

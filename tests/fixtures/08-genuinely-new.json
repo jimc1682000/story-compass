@@ -72,7 +72,11 @@
     "library_holding": "有｜虛構市立圖書館",
     "edition_id": "original",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "把潮汐週期與古代港口的貿易季節逐一對照，說明哪些航線因為潮汐窗口而興起或衰落；用海洋科學資料解釋經濟史，兩個領域的連結寫得具體。",
+      "reader_3star": "潮汐基礎知識那幾章寫得淺，熟悉的人可以跳過；港口貿易和潮汐對照的部分是我沒在別處讀過的觀點。"
+    }
   },
   "records": [],
   "seed": {
