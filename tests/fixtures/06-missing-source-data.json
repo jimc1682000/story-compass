@@ -81,7 +81,11 @@
     },
     "edition_id": "original",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "從語言學角度追溯一組虛構群島上各種語言的分化與接觸，用詞彙比較推估古代航海遷徙的路線。方法在語言學界是標準做法，對一般讀者是少見的切入點。",
+      "reader_3star": "前三章要耐心讀音韻規則，後面講航海遷徙的部分很好看；沒有語言學背景會有點吃力。"
+    }
   },
   "records": [],
   "seed": {

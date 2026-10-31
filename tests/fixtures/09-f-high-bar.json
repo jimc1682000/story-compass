@@ -71,7 +71,11 @@
     },
     "edition_id": "original",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "十個園藝小技巧，多數整理自常見的園藝入門書與網路文章，附插圖；沒有新的實驗、案例或作者自己的觀察。",
+      "reader_3star": "插圖漂亮，內容和免費的園藝網站差不多。"
+    }
   },
   "records": [],
   "seed": {

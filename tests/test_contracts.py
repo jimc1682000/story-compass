@@ -42,6 +42,16 @@ class ScoringAndIdentity(unittest.TestCase):
         self.assertIsNone(out['action'])
         self.assertEqual(out['analysis_mode'], 'general')
 
+    def test_review_labels_carry_review_text_for_model_runs(self):
+        # 模型試評要讀得到心得內文；只有標籤時模型一律判證據不足，測不到分數合理性。
+        for path in sorted((ROOT / 'tests/fixtures').glob('*.json')):
+            assessment = json.loads(path.read_text()).get('assessment', {})
+            labels = [label for label in assessment.get('reviews', []) if label != 'publisher_copy']
+            notes = assessment.get('review_notes', {})
+            with self.subTest(path.stem):
+                self.assertEqual(sorted(notes), sorted(labels))
+                self.assertTrue(all(text.strip() for text in notes.values()))
+
     def test_manual_seed_without_platforms_is_sufficient(self):
         fx = fixture('06b-manual-seed-no-platform.json')
         self.assertTrue(all(source['status'] != 'ok' for source in fx['coverage'].values()))
