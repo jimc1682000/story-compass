@@ -76,6 +76,7 @@ story-compass/
   skill/SKILL.md         核心方法（唯一技能）
   skill/references/      評分、資料模型、衝突、跨媒體、資料覆蓋、設定與邊界（安裝自足）
   templates/             空白設定、手動 seed、作品卡、路線檔、書單、目錄索引、驗證紀錄與全虛構 examples
+  docs/share.html        介紹頁（單檔 HTML，下載後用瀏覽器開）
   guides/                連線指引、首次設定、地圖養成法、分享範本準備、選用例行任務
   tests/                 純提示詞靜態檢查＋Skill 確定性規則的合成範例與測試
   tools/privacy_check.py 公開前的隱私檢查
