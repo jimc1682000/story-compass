@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>story-compass（敘脈者）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, like a field notebook; score lines and the A–F legend are the only set-off objects. */
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  color-scheme: light;
+  --bg: #f3f5f6;
+  --surface: #e6ebed;
+  --ink: #1b2a33;
+  --muted: #55656e;
+  --rule: #c9d3d8;
+  --accent: #1d6b73;
+  --needle: #b5672a;
+  --font-display: "LXGW WenKai TC", "Noto Serif TC", "PingFang TC", serif;
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a1f; --surface: #1b262d; --ink: #e2e9ec; --muted: #9aabb3;
+    --rule: #2c3b44; --accent: #5fb7bf; --needle: #e0975a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a1f; --surface: #1b262d; --ink: #e2e9ec; --muted: #9aabb3;
+  --rule: #2c3b44; --accent: #5fb7bf; --needle: #e0975a; color-scheme: dark;
+}
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.85;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 48px 72px;
+}
+main { max-width: 40rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2.4rem; }
+section { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+header { display: flex; flex-direction: column; gap: .8rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--rule); }
+.eyebrow { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.3; margin: 0; text-wrap: balance; }
+h1 .needle { color: var(--needle); }
+.lede { color: var(--muted); margin: 0; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.45rem; margin: 0; text-wrap: balance; color: var(--accent); }
+h3 { font-size: 1rem; margin: 0; font-weight: 700; }
+p { margin: 0; }
+ul, ol { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: .5rem; }
+strong { font-weight: 700; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--surface); padding: .08em .35em; border-radius: 3px; overflow-wrap: anywhere; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--needle); outline-offset: 2px; }
+
+.score {
+  font-family: var(--font-mono); font-size: 1rem; display: inline-block;
+  border: 1px solid var(--accent); color: var(--accent); border-radius: 4px;
+  padding: .05em .55em; white-space: nowrap;
+}
+.score.unknown { border-color: var(--muted); color: var(--muted); }
+
+.types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.types div { background: var(--bg); padding: .7rem .8rem; display: flex; flex-direction: column; gap: .1rem; }
+.types b { font-family: var(--font-mono); font-size: 1.15rem; color: var(--accent); }
+.types span { font-size: .92rem; }
+.types small { font-family: var(--font-mono); font-size: .75rem; color: var(--needle); }
+@media (max-width: 480px) { .types { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: .93rem; }
+th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--rule); }
+th { font-weight: 700; color: var(--muted); font-size: .8rem; letter-spacing: .05em; }
+td:first-child { font-weight: 700; white-space: nowrap; }
+
+.cases { display: flex; flex-direction: column; gap: 1.2rem; }
+.case { display: flex; flex-direction: column; gap: .35rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
+
+.repos { display: flex; flex-direction: column; gap: .4rem; font-family: var(--font-mono); font-size: .92rem; }
+footer { border-top: 1px solid var(--rule); padding-top: 1.4rem; font-family: var(--font-display); font-size: 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">story-compass · 敘脈者 · MIT</div>
+    <h1>不是好不好，是對你還剩<span class="needle">多少新東西</span></h1>
+    <p class="lede">一套把「這部作品值不值得買、看、借」換成「它讓我的知識地圖多了什麼」的評估方法，拆成羅盤與地圖兩個公開 repo。</p>
+  </header>
+
+  <section>
+    <h2>為什麼做</h2>
+    <p>起點很小：Kobo 每天都有特價書，我每天都在問「這本該不該買」。問久了才發現，問題根本不是書好不好，是它對我還剩多少新東西。書庫越大，越常重複買已經讀過的概念，買了的一直沒讀，真正值得收的版本反而漏掉。</p>
+    <p>後來同樣的問題在漫畫、動畫、電影、影集上出現：看過動畫算不算讀過原作？第二季追到一半是什麼狀態？重看一次要不要蓋掉第一次看完的紀錄？</p>
+    <p>所以我把自己評書的方法寫成規則，再把規則和資料拆開，放進兩個公開 repo。</p>
+    <ul>
+      <li><strong>story-compass</strong>：羅盤。方法、評分規範、skill、提示詞。不含任何人的資料。</li>
+      <li><strong>knowledge-map-template</strong>：地圖。你自己的已讀、持有、路線、讀後感的範本。不含判斷規則。</li>
+    </ul>
+    <p>兩個分開都能用；羅盤讀得到地圖的時候，去重、先讀書庫、沿用拒絕理由這些事才做得到。</p>
+  </section>
+
+  <section>
+    <h2>它在解決什麼</h2>
+    <p>核心是四個「分開」。</p>
+    <ol>
+      <li><strong>口碑分和個人邊際增益分開。</strong>暢銷、評價高、好讀、適合入門，都不是你該買的理由。分數只問一件事：這部作品讓你的知識地圖多出哪些節點和連線。</li>
+      <li><strong>值得看、值得買、值得擁有分開。</strong>價格只改變行動（買、特價再買、借、跳過），不改變分數。一本 F 類再包裝的書，特價九十九塊還是 F。</li>
+      <li><strong>作品、版本、改編分開；持有、購買意願、進度分開。</strong>不同譯本在同一作品下各自有進度；改編另立作品連回原作；書庫裡有不等於讀過；拒買不等於沒讀。</li>
+      <li><strong>資料缺口誠實寫。</strong>查不到不等於沒買、沒看。個人依據不足就說「個人依據不足」，做一般分析，不硬給一個數字。</li>
+    </ol>
+    <p>評分固定寫成一行：<code>字母 中文名／分數／作品名</code>。六種型態：</p>
+    <div class="types">
+      <div><b>A</b><span>新大陸</span></div>
+      <div><b>B</b><span>新骨幹</span></div>
+      <div><b>C</b><span>跨連線</span></div>
+      <div><b>D</b><span>加深</span></div>
+      <div><b>E</b><span>整理</span><small>上限 55／70</small></div>
+      <div><b>F</b><span>再包裝</span><small>上限 40</small></div>
+    </div>
+    <p>F 預設上限 40 分，要超過得說出「這個包裝帶來的新東西」是什麼；E 預設 55，能當一個領域的索引才到 70。</p>
+  </section>
+
+  <section>
+    <h2>三種入口</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>入口</th><th>給誰</th><th>要準備什麼</th></tr></thead>
+        <tbody>
+          <tr><td>純提示詞</td><td>只想試一次</td><td>複製 <code>prompt.md</code>，填作品、目標、幾部已知作品，貼給任何聊天模型。不用帳號，沒有長期狀態</td></tr>
+          <tr><td>Skill</td><td>已有支援 SKILL.md 的代理環境</td><td>把 <code>skill/</code> 整個資料夾放進 skills 目錄。多了完整評分規範、資料格式、來源衝突規則、季集進度</td></tr>
+          <tr><td>Grok Bot</td><td>想長期用、接書櫃與觀影紀錄</td><td>再加首次設定流程、選用連線、選用例行任務。全部可選，排程預設關閉</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>三個入口的功能刻意不對齊。純提示詞不做同步，不鎖定已讀，也不排程；它只負責一次評估，一段文字就夠。</p>
+  </section>
+
+  <section>
+    <h2>四個例子（作品全是虛構的）</h2>
+    <div class="cases">
+      <div class="case">
+        <h3>目標充足的時候</h3>
+        <p>目標是「想理解海洋與貿易史的連結」，已讀《虛構：潮間帶筆記》。候選《虛構：潮汐與貿易》得到 <span class="score">C 跨連線／74</span>，值得讀，有特價可以買。特價不會把 74 變成 84。</p>
+      </div>
+      <div class="case">
+        <h3>書庫已有替代的時候</h3>
+        <p>書庫有未讀的《虛構：海洋法十講》，候選《虛構：海洋法圖解》涵蓋同一個知識任務約八成，得到 <span class="score">E 整理／48</span>，行動是「先讀書庫」。分數照實給，不因為書庫有替代就壓低。</p>
+      </div>
+      <div class="case">
+        <h3>改編對原作的時候</h3>
+        <p>看過動畫第一季，候選是原作漫畫，不當成重複；比較原作多出的支線與內心描寫，建議入口版本，不預設最新改編最好。</p>
+      </div>
+      <div class="case">
+        <h3>依據不足的時候</h3>
+        <p>只有出版社文案，沒有目標也沒有已知作品，就寫 <span class="score unknown">？ 證據不足／—</span>，給一般看點與適合對象，不給分。</p>
+      </div>
+    </div>
+    <p>影視另外分三段輸出：觀看建議與理由；取得方式，只輕量確認一個合法入口，未知就寫未知；收藏價值與理由。</p>
+  </section>
+
+  <section>
+    <h2>地圖那一邊</h2>
+    <p>knowledge-map-template 給的是結構。</p>
+    <ul>
+      <li><code>map/paths.yaml</code> 是閱讀路線的真相來源，路線是依賴關係，不是書櫃分類；新路線一律 <code>pending</code>，你說開始讀才翻 <code>active</code>。</li>
+      <li><code>map/OVERVIEW.md</code> 是它的投影，腳本重產狀態表與拓樸骨架，人只填標記區塊；不手改表充當真相。</li>
+      <li><code>catalog/</code> 放持有事實，同步產生的分片不手改；預覽本永遠不算擁有。</li>
+      <li>讀後感 0–5 另記，不抬地圖分。</li>
+    </ul>
+    <p>範本附資料不變量測試與 CI：路線狀態在允許值內、id 唯一、總覽與路線檔一致、目錄總數對得上。養地圖的節奏（同步後的薄對帳、讀完的深更新、什麼時候才寫作品卡）寫在 story-compass 的 <code>guides/map-maintenance.md</code>。</p>
+  </section>
+
+  <section>
+    <h2>限制</h2>
+    <ul>
+      <li>真實模型試評每案只跑一次，跑不出變異數。純提示詞：兩個模型各試 6 個案例，評分行、上限與誘導分數都守住。Skill：兩個模型各試 6 個案例，題目隱去答案；型態 7／12 與預期一致，其餘落在相鄰型態，分數 11／12 落在預期範圍。</li>
+      <li>測試資料的評論是虛構心得，篇幅短。十六個 fixtures 通過，測的是確定性規則，不等於真實模型面對真實書評也會這樣評。</li>
+      <li>連線與例行任務只有規範與停用範本，不附同步程式。要接平台，自備唯讀工具或手動匯出。</li>
+      <li>不替你標已讀／已看、不下單、不訂閱、不下載內容、不碰 DRM。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>怎麼開始</h2>
+    <ol>
+      <li>先用純提示詞跑五次。哪些判斷你不同意，那就是該寫進 seed 的「目標」。</li>
+      <li>再裝 skill，把已讀、已看、持有整理成作品卡（作品 → 版本 → 載體／平台）。</li>
+      <li>用 knowledge-map-template 建自己的私人地圖，跑一次總覽重產。</li>
+      <li>最後才考慮連線與例行任務：一次接一個來源，核對總數才算接好。</li>
+    </ol>
+    <p>兩個 repo 都是 MIT：</p>
+    <div class="repos">
+      <a href="https://github.com/jimc1682000/story-compass">github.com/jimc1682000/story-compass</a>
+      <a href="https://github.com/jimc1682000/knowledge-map-template">github.com/jimc1682000/knowledge-map-template</a>
+    </div>
+  </section>
+
+  <footer>它只回答一個問題：你的地圖還缺什麼。</footer>
+</main>
+</body>
+</html>

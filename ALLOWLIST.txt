@@ -5,6 +5,7 @@ ALLOWLIST.txt
 LICENSE
 README.md
 ROLE.md
+docs/share.html
 guides/connect-github-repo.md
 guides/connect-kobo.md
 guides/connect-yamtrack.md
