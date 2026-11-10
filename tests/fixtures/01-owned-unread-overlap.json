@@ -71,7 +71,11 @@
     },
     "edition_id": "original",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "把海洋法入門常見的領海、專屬經濟區、公海與航行權重新整理成對照表，每個制度並列權利、義務與常見爭議，查找比文字敘述的入門書方便。範圍和常見的入門書幾乎相同，沒有新案例或新論證。",
+      "reader_3star": "對照表整理得比我讀過的入門書清楚，適合當複習工具；但如果已經有一本海洋法入門書，內容大致都在裡面。"
+    }
   },
   "records": [
     {

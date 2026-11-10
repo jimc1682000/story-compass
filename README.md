@@ -51,7 +51,7 @@ story-compass（中文名「敘脈者」）是一個用**個人知識地圖的�
 | 項目 | 狀態 |
 |---|---|
 | 純提示詞的一次性作品評估（書、漫畫、動畫、電影、影集） | 獨立、自足，含 A–F 型態、分數與上限；`tests/check_prompt.py` 只做靜態檢查。兩個模型在 repo 外各試評過 6 個案例，每案一次，**未測變異**；試評輸出不隨 repo 出貨 |
-| 書（電子書／紙本／有聲書）評估方法：A–F、0–100、F 預設上限 40、E 預設 55／索引例外 70 | 已定義（`skill/`、`skill/references/scoring-rubric.md`）；純提示詞的評分行與誘導分數已試評，Skill 的分數合理性因測試資料無評論內文**尚未驗證** |
+| 書（電子書／紙本／有聲書）評估方法：A–F、0–100、F 預設上限 40、E 預設 55／索引例外 70 | 已定義（`skill/`、`skill/references/scoring-rubric.md`）；純提示詞的評分行與誘導分數已試評；Skill 用 fixtures 的虛構心得、隱去型態與分數試評 6 案，兩個模型各跑一次：型態與合成輸入一致 7／12，其餘落在相鄰型態（D→F、A→C、B→C）；分數 11／12 落在預期分數帶；接受帶與輸出不隨 repo 出貨，**未測變異** |
 | 漫畫、動畫、電影、影集的評估方法 | 已定義評估與影視三段輸出規範（`skill/references/cross-media.md`）；模型品質**未實測** |
 | 作品／版本／載體／平台資料模型；進度／購買意願／持有分欄；紙本欄位；舊格式對照 | 已定義（`skill/references/work-edition-model.md`、`templates/work-card.yaml`）；不遷移任何人的書庫 |
 | 按欄位處理來源衝突、完成保護、重看歷史、季／集進度 | 已定義（`skill/references/status-mapping.md`）；純函式 oracle 測試，沒有平台寫入或提醒 |
@@ -64,7 +64,7 @@ story-compass（中文名「敘脈者」）是一個用**個人知識地圖的�
 | 例行任務（特價、即將下架、精選、同步） | 只有**預設停用**的範本與啟用前契約（`guides/routines.md`）；沒有 scheduler |
 | Grok Share Template | 只有準備指引（`guides/share-template-prep.md`）；未建立、未實測 |
 | 隱私檢查 | `tools/privacy_check.py`：全檔 allowlist、全 UTF-8 文字、套件外報告；私人樣式與書庫交叉比對需另外提供輸入 |
-| 驗收測試 | fixtures 與 `tests/test_contracts.py` 測**確定性 oracle、資料與封裝契約、隱私檢查器**；assessment 為合成輸入，模型實際評分品質**未實測** |
+| 驗收測試 | fixtures 與 `tests/test_contracts.py` 測**確定性 oracle、資料與封裝契約、隱私檢查器**；assessment 的型態與分數為合成輸入，另附虛構心得（`review_notes`）供模型試評，試評不在 CI 裡跑 |
 
 ## 檔案地圖
 

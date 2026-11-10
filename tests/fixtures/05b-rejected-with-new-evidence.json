@@ -72,7 +72,11 @@
     "new_evidence": "增訂版新增三章與新資料",
     "edition_id": "revised",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "增訂版新增三章，用近十年的港口城市資料重寫了初版過時的人口與航運統計，並提出一套用海岸線形狀解釋城市擴張方向的分析框架。初版其餘章節大致保留。",
+      "reader_3star": "新增的三章是全書最好的部分，把城市規劃和海港貿易接了起來；舊章節有點囉嗦。"
+    }
   },
   "records": [
     {

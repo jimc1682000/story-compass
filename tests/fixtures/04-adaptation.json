@@ -97,7 +97,11 @@
     "edition_id": "original-manga",
     "carrier": "digital",
     "platform": "manual",
-    "origin": "網路連載，虛構年份"
+    "origin": "網路連載，虛構年份",
+    "review_notes": {
+      "specialist_review": "原作是網路連載漫畫，畫工粗糙但分鏡俐落。動畫第一季忠實改編了前三卷主線，原作多出的是幾段角色日常、冷笑話和作者後記；第四卷之後的劇情動畫還沒做。重製漫畫畫面精緻，但刪掉部分原作的冷笑話。",
+      "reader_3star": "先看過動畫再讀原作，前三卷大多是重溫，新鮮感主要來自第四卷之後。和海洋或歷史沒有關係，純粹是好看的冒險故事。"
+    }
   },
   "records": [
     {

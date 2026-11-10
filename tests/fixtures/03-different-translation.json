@@ -73,7 +73,11 @@
     "edition_gain": "譯本品質",
     "edition_id": "translation-b",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "乙譯本與甲譯本是同一份原文，沒有增補章節。乙譯本修正了甲譯本幾處被詬病的術語錯譯，但句子仍偏生硬，註釋大多沿用甲譯本。",
+      "reader_3star": "拿甲譯本對照讀了前三章，除了少數名詞改得比較準，閱讀感受差不多；已經讀懂甲譯本內容的話，乙譯本多給的東西很少。"
+    }
   },
   "records": [
     {

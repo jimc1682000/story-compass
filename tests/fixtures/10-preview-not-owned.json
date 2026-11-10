@@ -70,7 +70,11 @@
     },
     "edition_id": "translation-a",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "一位造紙匠人回憶家族三代在海邊小鎮做燈籠的歷史，穿插港口節慶與漁業興衰的口述資料，敘事細膩。",
+      "reader_3star": "故事很動人，但歷史資料的份量不多，比較像散文；讀完對海邊小鎮的生活有更具體的畫面。"
+    }
   },
   "records": [
     {

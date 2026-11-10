@@ -73,7 +73,11 @@
     },
     "edition_id": "translation-a",
     "carrier": "ebook",
-    "platform": "manual"
+    "platform": "manual",
+    "review_notes": {
+      "specialist_review": "以一條虛構河流兩百年的航運紀錄串起沿岸城鎮的興衰，史料運用紮實，敘事節奏偏慢。",
+      "reader_3star": "前半很精彩，後半變成流水帳；甲譯本讀起來還算順。"
+    }
   },
   "records": [
     {
