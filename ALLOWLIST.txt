@@ -1,6 +1,7 @@
 # 允許公開的檔案（相對於 repo 根目錄）。新增檔案必須先加到這裡，並重跑 tools/privacy_check.py
 .github/workflows/ci.yml
 .gitignore
+AGENTS.md
 ALLOWLIST.txt
 LICENSE
 README.md
